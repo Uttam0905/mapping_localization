@@ -1,0 +1,212 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+
+  <world name="room_world">
+
+    <!-- Physics -->
+    <physics type="ode">
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+
+    <!-- Sun -->
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <!-- Ground -->
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+
+    <!-- ===================== -->
+    <!-- ROOM WALLS (10m x 10m) -->
+    <!-- ===================== -->
+
+    <!-- North Wall -->
+    <model name="wall_north">
+      <static>true</static>
+      <pose>0 5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- South Wall -->
+    <model name="wall_south">
+      <static>true</static>
+      <pose>0 -5 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>10 0.2 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- East Wall -->
+    <model name="wall_east">
+      <static>true</static>
+      <pose>5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.2 10 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.2 10 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- West Wall -->
+    <model name="wall_west">
+      <static>true</static>
+      <pose>-5 0 0.5 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.2 10 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.2 10 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- ================= -->
+    <!-- INTERNAL OBSTACLES -->
+    <!-- ================= -->
+
+    <!-- Center box -->
+    <model name="obstacle_center">
+      <static>true</static>
+      <pose>2.5 2.5 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>1 1 0.5</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>1 1 0.5</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Side obstacle -->
+    <model name="obstacle_1">
+      <static>true</static>
+      <pose>-2 2 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>0.5 1.5 0.5</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>0.5 1.5 0.5</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Another obstacle -->
+    <model name="obstacle_2">
+      <static>true</static>
+      <pose>2 -1.5 0.25 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>1.2 0.4 0.5</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>1.2 0.4 0.5</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+
+    <model name="cylinder_obstacle">
+  <static>true</static>
+
+  <!-- pose: x y z roll pitch yaw -->
+  <pose>-1.0 -1.0 0.25 0 0 0</pose>
+
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <cylinder>
+          <radius>0.3</radius>
+          <length>0.5</length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <cylinder>
+          <radius>0.3</radius>
+          <length>0.5</length>
+        </cylinder>
+      </geometry>
+    </visual>
+  </link>
+</model>
+
+    <model name="cylinder_obstacle2">
+  <static>true</static>
+
+  <!-- pose: x y z roll pitch yaw -->
+  <pose>-1.0 -3.0 0.25 0 0 0</pose>
+
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <cylinder>
+          <radius>0.3</radius>
+          <length>0.5</length>
+        </cylinder>
+      </geometry>
+    </collision>
+
+    <visual name="visual">
+      <geometry>
+        <cylinder>
+          <radius>0.3</radius>
+          <length>0.5</length>
+        </cylinder>
+      </geometry>
+    </visual>
+  </link>
+</model>
+
+  </world>
+</sdf>
