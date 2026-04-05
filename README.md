@@ -1,7 +1,7 @@
 # 🤖 Autonomous Mapping, Localization & Navigation (ROS 2)
 
 <p align="center">
-  <img src="figures/gazebo_ss_nav.png" width="720" alt="Gazebo Simulation with LiDAR"/>
+  <img src="Figures/gazebo_ss_nav.png" width="720" alt="Gazebo Simulation with LiDAR"/>
 </p>
 
 A ROS 2–based autonomous navigation pipeline for a differential-drive mobile robot, simulated in Gazebo Classic. The system performs real-time SLAM, localizes on a saved map, and executes goal-based autonomous navigation — all coordinated through a modular, production-style launch architecture.
@@ -13,7 +13,7 @@ A ROS 2–based autonomous navigation pipeline for a differential-drive mobile r
 > Robot localizing on a saved map and autonomously navigating to a 2D goal pose, with live LiDAR scan and global path visible in RViz.
 
 <p align="center">
-  <img src="figures/rviz_path_ss.png" width="720" alt="RViz Path Planning and Localization"/>
+  <img src="Figures/rviz_path_ss.png" width="720" alt="RViz Path Planning and Localization"/>
 </p>
 
 ---
@@ -59,7 +59,7 @@ The system was evaluated on map coverage, localization stability, and navigation
 ### Map Generated Using SLAM
 
 <p align="center">
-  <img src="figures/rviz_ss.png" width="720" alt="SLAM Occupancy Grid Map in RViz"/>
+  <img src="Figures/rviz_ss.png" width="720" alt="SLAM Occupancy Grid Map in RViz"/>
 </p>
 
 > Occupancy grid built from scratch by manually driving the robot through the environment. Walls, obstacle boundaries, and free space are captured cleanly at 0.05 m/cell resolution.
@@ -67,7 +67,7 @@ The system was evaluated on map coverage, localization stability, and navigation
 ### Navigation Trajectory
 
 <p align="center">
-  <img src="figures/trajectory.png" width="500" alt="Robot Navigation Trajectory Plot"/>
+  <img src="Figures/trajectory.png" width="500" alt="Robot Navigation Trajectory Plot"/>
 </p>
 
 > Logged odometry trajectory across a complete navigation run. The smooth S-curve reflects the local planner making real-time adjustments while tracking the global plan. Path deviation remained within **0.1–0.2 m** throughout.
@@ -176,11 +176,11 @@ A strict `map → odom → base_link → sensors` hierarchy is enforced througho
 
 ## 🔭 Future Work
 
-- [ ] Hardware deployment on a physical differential-drive platform
-- [ ] Quantitative localization error analysis against ground truth poses
-- [ ] Local planner parameter tuning (DWB / TEB) for faster convergence
-- [ ] Multi-robot map merging and collaborative SLAM
-- [ ] Dynamic obstacle detection and avoidance integration
+- Hardware deployment on a physical differential-drive platform
+- Quantitative localization error analysis against ground truth poses
+- Local planner parameter tuning (DWB / TEB) for faster convergence
+- Multi-robot map merging and collaborative SLAM
+- Dynamic obstacle detection and avoidance integration
 
 ---
 
