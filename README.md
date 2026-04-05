@@ -83,14 +83,6 @@ The system was evaluated on map coverage, localization stability, and navigation
 - `slam_toolbox`, `nav2_bringup`, `twist_mux` packages
 - `colcon` build tool
 
-### 1. Clone and build
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO.git
-cd YOUR_REPO
-colcon build
-source install/setup.bash
-```
-
 ---
 
 ## 🕹️ Running the System
