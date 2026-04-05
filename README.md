@@ -100,7 +100,7 @@ Verify robot pose aligns with the map in RViz.
 
 3️⃣ Navigation
 ~~~
-ros2 launch mapping_robot navigation.launch.py
+ros2 launch mapping_robot nav2.launch.py
 ~~~
 
 Send goals from RViz.
